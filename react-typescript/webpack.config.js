@@ -3,7 +3,7 @@ const path = require('path');
 const { LoaderOptionsPlugin } = require('webpack');
 
 module.exports = {
-    entry: ['./src/index.js'],
+    entry: ['./src/index.tsx'],
     output: {
         path: path.resolve(__dirname, 'dist'),
         filename: 'bundle.js'
@@ -11,12 +11,15 @@ module.exports = {
     module: {
         rules: [
             {
-                test: /\.(js|jsx)$/,
-                use: 'babel-loader', //junção do babel com o webpack
+                test: /\.(ts|tsx)$/,
+                use: 'ts-loader',
                 exclude: /node_modules/
             }
         ]
     },
+	resolve: {
+		extensions: ['.tsx', '.ts', '.jsx']
+	},
     devServer: {
         port: 3030
     },
