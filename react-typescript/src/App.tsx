@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function App() {
 
-    const status = "Funcionando";
+    const status = "funcionando";
 
     return (
         <div>

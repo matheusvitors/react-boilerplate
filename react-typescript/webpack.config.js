@@ -11,14 +11,14 @@ module.exports = {
     module: {
         rules: [
             {
-                test: /\.(ts|tsx)$/,
+                test: /\.tsx?$/,
                 use: 'ts-loader',
                 exclude: /node_modules/
             }
         ]
     },
 	resolve: {
-		extensions: ['.tsx', '.ts', '.jsx']
+		extensions: ['.tsx', '.ts', '.js', '.jsx']
 	},
     devServer: {
         port: 3030
